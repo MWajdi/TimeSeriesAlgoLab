@@ -1,5 +1,5 @@
 import numpy as np
-from plot_utils import plot_series
+
 
 def generate_synthetic_data(time, level=0, trend=False, slope=0, 
                             seasonality=False, period=0, phase=0, amplitude=0, 
@@ -47,11 +47,3 @@ def generate_synthetic_data(time, level=0, trend=False, slope=0,
 
     return series
 
-time = np.arange(0,30,1e-1)
-# series = generate_synthetic_data(time, trend=False, slope=0.7, seasonality=True, period=10, phase=0, amplitude=5, level=1, noise=True, noise_level=0.5, 
-                                 # autocorrelation=False, phi1=0.5, phi2=-0.1, ac_amplitude=1, impulses=True, nb_impulses=10, impulse_amplitude=10)
-
-series = generate_synthetic_data(time, autocorrelation=True, ac_amplitude=1, phi1=0.5, phi2=-0.1, impulses=True, nb_impulses=10, impulse_amplitude=10)
-
-
-plot_series(time,series)
